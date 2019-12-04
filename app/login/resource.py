@@ -1,15 +1,15 @@
 from __future__ import absolute_import
 
+import datetime
+import jwt
 from flask import request, current_app
 from flask_restful import Resource, reqparse
 from sqlalchemy import or_
 
 from app import bcrypt
-from ..utils import verify_basic_auth
-from ..models import UserModel
 from ..constants import STATUS_USER_DEACTIVATED, STATUS_USER_PENDING
-
-import jwt, datetime, time
+from ..models import UserModel
+from ..utils import verify_basic_auth
 
 __author__ = 'Simeon'
 

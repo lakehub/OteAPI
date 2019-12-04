@@ -21,6 +21,7 @@ def create_app(config_name):
 
     from .customer import customer
     from .login import login
+    from .validate import validate
 
     db.init_app(application)
     bcrypt.init_app(application)
@@ -28,6 +29,7 @@ def create_app(config_name):
 
     application.register_blueprint(customer)
     application.register_blueprint(login)
+    application.register_blueprint(validate)
 
     file_handler = RotatingFileHandler(application.config['LOGFILE'], maxBytes=20971520, backupCount=5, encoding='utf-8')
     file_handler.setLevel(logging.DEBUG)

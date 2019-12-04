@@ -23,3 +23,10 @@ class UserModel(BaseModel):
     latitude = db.Column(db.Numeric)
     longitude = db.Column(db.Numeric)
     current_status = db.Column(db.Integer)
+
+
+class BlacklistTokenModel(BaseModel):
+    __tablename__ = 'blacklist_token'
+    token = db.Column(db.String(), unique=True, nullable=False)
+    blacklisted_on = db.Column(db.DateTime, default=db.func.current_timestamp())
+
