@@ -52,7 +52,7 @@ python-dateutil==2.6.1
 python-editor==1.0.3
 pytz==2017.2
 raven==6.5.0
-requests==2.18.4
+requests==2.20.0
 rope==0.10.7
 simplejson==3.11.1
 singledispatch==3.4.0.3
