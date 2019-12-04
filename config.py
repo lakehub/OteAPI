@@ -23,6 +23,7 @@ class BaseConfig:
 
     AUTH_USERNAME = 'ote'
     AUTH_PASSWORD = 'Keny@21%'
+    SECRET = ",\x85\x1f\t\r\xd7'\xda\xd2\xa23\x10\xddW\xe4\x141\xb78Mu\x16\rP%\xe6m\xf4xoi\x93"
 
     @staticmethod
     def init_app(app):

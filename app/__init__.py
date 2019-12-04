@@ -20,12 +20,14 @@ def create_app(config_name):
     application.config.from_object(config[config_name])
 
     from .customer import customer
+    from .login import login
 
     db.init_app(application)
     bcrypt.init_app(application)
     CORS(application)
 
     application.register_blueprint(customer)
+    application.register_blueprint(login)
 
     file_handler = RotatingFileHandler(application.config['LOGFILE'], maxBytes=20971520, backupCount=5, encoding='utf-8')
     file_handler.setLevel(logging.DEBUG)
